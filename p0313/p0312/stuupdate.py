@@ -7,6 +7,9 @@ def stu_print():
      print('4. 학생 성적수정')
      print('5. 학생 성적삭제')
 
+
+
+
 def score_update(choice,s_title,student):
      print(f' [ {s_title[choice]} 성적 수정 ] ')
      print(f'현재 {s_title[choice]} 성적 : ',student[choice+1])
