@@ -1,7 +1,8 @@
 import P0315_02
 #10명의 아이디, 패스워드 생성
 member = P0315_02.idpw()
-print(member)
+# 파일열기
+file = open('mem.txt','r',encoding='utf8')
 
 # 로그인
 temp = 0
@@ -18,12 +19,19 @@ while True:
      if c_pw == '0':break
      
      success_flag = 0
-     for m in member: # [[aaa,1111]]
-          if m[0] == c_id and m[1] == c_pw:
-               success_flag = 1
-               break
-          # else:
-          #      success_flag = 0     
+     #파일 읽기
+     m = []
+     while True:
+          content = file.readlines()
+          if content =='': break
+          m = content.split(',')
+          m[0] = m[0].strip() 
+          m[1] = m[1].strip()
+          if c_id == m[0] and c_pw == m[1]:
+               success_flag = 1          
+    
+     #파일 닫기
+     file.close()
      
      if success_flag == 1:
           print('로그인이 되었습니다.')
