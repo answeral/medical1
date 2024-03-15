@@ -1,19 +1,20 @@
 
 # 파일저장
-# file = open('str.txt','w',encoding='utf8')
+# file = open('str.txt','w',encoding='utf8') # 파일을 만들거나 읽기로 열고
 
-# file.write('안녕하세요. 반갑습니다.\n')
+# 파일에 쓰기
+# file.write('안녕하세요. 반갑습니다.\n') 
 # file.write('저는 홍길동입니다.\n')
 # file.write('파이썬 수업을 열심히 듣고 있습니다.\n')
 
-# file.close()
+# file.close() # 파일 닫으면서 저장
 # print('파일이 저장되었습니다.')
 
 # 파일 읽어오기
-# file = open('str.txt','r',encoding='utf8') #
+# file = open('str.txt','r',encoding='utf8') # 파일 읽기용도로 열고
 # while True:
 #      txt = file.readline() # 파일 1줄 읽어오기
-#      if txt == "":
+#      if txt == "": # 만약 텍스트가 공백이 되면 멈춰라
 #           break
 #      print(txt, end = '')
 

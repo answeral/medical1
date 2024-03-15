@@ -12,7 +12,7 @@ while True:
         print(os.listdir()) # 1개씩 세로로 출력되도록 하시오.
         for f_name in os.listdir():
             # if f_name.find('.') == -1:
-            if f_name.endswith('.txt'):
+            if f_name.endswith('.txt'): 
                 print(f_name)
     elif choice == 2:
         # txt파일만 출력해서 입력을 받아보세요.

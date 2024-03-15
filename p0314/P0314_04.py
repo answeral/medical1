@@ -1,7 +1,7 @@
 # 파일 생성
 
 # file open
-file = open('memo.txt','w',encoding='utf8')
+file = open('memo.txt','w',encoding='utf8') # 
 try:
      # file write
      file.write('안녕하세요.1\n')

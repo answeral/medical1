@@ -1,7 +1,7 @@
 # read
 
 # 파일 열기
-file = open('memo.txt','r',encoding='utf8')
+file = open('memo.txt','r',encoding='utf8') # 읽는 용도로 열어라
 
 # 파일 읽기
 content = file.read() # 메모장에 있는 모든 글을 읽어옴. 
