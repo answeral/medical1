@@ -36,24 +36,30 @@ class Car():
 car_list = []          
 
 c1 = Car('white',5,4,0)
-print(c1)
-# for i in range(3):
-#      c1.upspeed(i)
 
-# car_list.append(c1)
+for i in range(3): 
+    c1.upspeed()
 
 
-
-# c2 = Car('red',5,4,0)
-# for i in range(10):
-#      c2.upspeed(i)
-# car_list.append(c2)
+car_list.append(c1)
+car_list.append(c1.upspeed)
 
 
-# c3 = Car('silver',5,4,0)
-# for i in range(7):
-#      c3.upspeed(i)
+
+
+c2 = Car('red',5,4,0)
+for i in range(10):
+     c2.upspeed()
+car_list.append(c2)
+car_list.append(c2.upspeed)
+
+
+c3 = Car('silver',5,4,0)
+for i in range(7):
+     c3.upspeed()
      
-# car_list.append(c3)
+car_list.append(c3)
+car_list.append(c3.upspeed)
 
-# print(car_list)
+
+print(car_list)
