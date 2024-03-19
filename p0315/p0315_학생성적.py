@@ -117,7 +117,7 @@ def stu_update():
                     print('학생찾기를 종료합니다')
                     break
             for s_dic in students: #ex)다섯명이 있으면 5번반복 s_dic 키값 s_dic[]= value 값
-                if s_dic['name']==search:
+                if s_dic['name']==search: #   딕셔너리
                     break
                 chk += 1
             print('찾고자 하는 학생의 위치 :' , chk)
