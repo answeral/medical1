@@ -26,7 +26,7 @@ while True:
     txt = f.readline()
     if txt == "": break
     txt_list = txt.split(",")
-    # 1,홍길동,99,99,87,285,95.0,1
+    # 1,홍길동,99,99,87,285,95.0,1 # 클래스랑 순서 맞춰서
     s = Student(txt_list[1],int(txt_list[2]),int(txt_list[3]),int(txt_list[4]),int(txt_list[0]),int(txt_list[7]))
     students.append(s)
 f.close()
@@ -157,29 +157,18 @@ while True:
                
                print('-'*60)
                
-               if s_input == 1:
-                    print('국어 점수 수정')
-                    print(f'현재 국어 점수 : {i.kor}')
-                    score = int(input('수정할 점수를 입력하세요. >> '))
-                    i.kor = score
-                    i.total = i.kor + i.eng + i.math
-                    i.avg = float('{:.2f}'.format(i.total/3))
-                    print(' 수정완료되었습니다. ')
+            #    if s_input == 1:
+            #         print('국어 점수 수정')
+            #         print(f'현재 국어 점수 : {i.kor}')
+            #         score = int(input('수정할 점수를 입력하세요. >> '))
+            #         i.kor = score
+            #         i.total = i.kor + i.eng + i.math
+            #         i.avg = float('{:.2f}'.format(i.total/3))
+            #         print(' 수정완료되었습니다. ')
                     
-               if s_input ==2:
-                    print('영어 점수 수정')
-                    print(f'현재 영어 점수 :{i.eng}')
-                    score = int(input('수정할 점수를 입력하세요. >>'))
-                    i.eng =    score
+            #    if s_input ==2:
+            #         print('영어 점수 수정')
+            #         print(f'현재 영어 점수 :{i.eng}')
+            #         score = int(input('수정할 점수를 입력하세요. >>'))
+            #         i.eng =    score
                     
-                        
-                             
-          
-
-
-
-
-
-
-
-
