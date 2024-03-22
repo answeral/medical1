@@ -46,9 +46,11 @@ def main_title_print():
     print("[ 학생성적프로그램 ]")
     print("-"*40)
     print("1. 학생성적입력")
-    print("2. 학생성적전체입력")
+    print("2. 학생성적전체출력")
     print("3. 학생검색")
     print("4. 학생성적수정")
+    print("5. 학생성적삭제")
+    print("6. 학생등수처리")
     print("0. 종료")
     print("-"*40)
     choice = input("원하는 번호를 입력하세요.>> ")
@@ -72,12 +74,14 @@ def stu_insert():
         s = Student(name,kor,eng,math)
         students.append(s)
         print("입력 데이터 :",s)
+
 def stu_print():
     stu_main_print()
     # 데이터 출력
     for i in students:
         print(i) # 객체를 출력
     print()
+
 def search_title_print():
     print("\t[ 학생성적 검색 ]")
     print("-"*40)
@@ -87,6 +91,7 @@ def search_title_print():
     print("0. 이전화면 이동")
     choice = int(input("원하는 번호를 입력하세요.>> "))
     return choice
+
 def stu_search(choice):
     if choice == 1:
         search = input(search_txt[choice])
@@ -104,12 +109,105 @@ def stu_search(choice):
         elif choice == 3:
             if i.total <= search:
                 s_list.append(i)
-    if len(s_list) != 0:
+    if len(s_list) != 0: # s_list를 돌았을 때 0이 아니라면 프린트해라
         stu_main_print()
         for i in s_list:
             print(i)
     else:
         print("찾고자 하는 학생이 없습니다. 다시 검색하세요. ")
+        
+        
+        
+def stu_update():
+    # 1. 이름으로 학생을 검색
+        search = input("찾고자 하는 이름을 입력하세요. >> ")
+        # 전체리스트에서 학생검색
+        cnt = 0
+        for s in students: # 학생 수 만큼 반복
+            if s.name == search:
+                break
+            cnt += 1    # 0 1 students[2] 3 4 5 6
+                                
+        if cnt >= 7:
+            print("찾고자 하는 학생이 없습니다. 다시 검색하세요. ")
+        else:
+            print(f"{search}(으)로 검색한 학생을 찾았습니다.")
+            print("[ 수정할 과목 선택 ]")
+            print('-'*60)
+       # 2-1. 찾았으면 과목 선택
+            print("1. 국어성적수정 ")
+            print("2. 영어성적수정 ")
+            print("3. 수학성적수정 ")
+            choice = int(input('원하는 번호를 입력하세요. >> '))
+            if choice == 1:
+                print('국어성적수정을 선택하셨습니다.')
+                print(f"변경 전 점수 :{students[cnt].kor}" )
+                students[cnt].kor = score = int(input("변경할 점수를 입력하세요. >> "))
+                students[cnt].total = students[cnt].kor +students[cnt].eng+students[cnt].math
+                students[cnt].avg = float("{:.2f}".format(students[cnt].total/3))
+                print(f"{students[cnt].kor}으로 점수가 변경되었습니다.")
+            
+            elif choice == 2:
+                print('영어성적수정을 선택하셨습니다.')
+                print(f"변경 전 점수 :{students[cnt].eng}" )
+                students[cnt].eng = score = int(input("변경할 점수를 입력하세요. >> "))
+                students[cnt].total = students[cnt].kor +students[cnt].eng+students[cnt].math
+                students[cnt].avg = float("{:.2f}".format(students[cnt].total/3))
+                print(f"{students[cnt].eng}으로 점수가 변경되었습니다.")
+            
+            elif choice == 3:
+                print('수학성적수정을 선택하셨습니다.')
+                print(f"변경 전 점수 :{students[cnt].math}" )
+                students[cnt].math = score = int(input("변경할 점수를 입력하세요. >> "))
+                students[cnt].total = students[cnt].kor +students[cnt].eng+students[cnt].math
+                students[cnt].avg = float("{:.2f}".format(students[cnt].total/3))
+                print(f"{students[cnt].math}으로 점수가 변경되었습니다.")
+                
+                
+def stu_delete():
+        search = input("삭제하고자 하는 학생 이름을 입력하세요. >> ")
+        # 전체리스트에서 학생검색
+        cnt = 0
+        for s in students: # 학생 수 만큼 반복
+            if s.name == search:
+                break
+            cnt += 1    # 0 1 students[2] 3 4 5 6
+                                
+        if cnt >= len(students):
+            print("삭제하고자 하는 학생이 없습니다. 다시 검색하세요. ")
+        else:
+            print(f"{search}(으)로 검색한 학생을 찾았습니다.")
+            print("[ 학생성적삭제 ]")
+            print('-'*60)
+       
+            print("1. 삭제 ")
+            print("0. 취소 ")
+        
+            choice = int(input('원하는 번호를 입력하세요. >> '))
+            if choice == 1:
+                del students[cnt]
+                print(f"{search}학생 성적이 삭제 되었습니다.")
+            else :
+                print('학생 성적 삭제를 취소하셨습니다.')
+def stu_rank():
+    print('등수처리를 진행하시겠습니까?')
+    print("1. 진행")
+    print("0. 취소")
+    choice = int(input('원하는 번호를 입력하세요. >> '))
+    
+    if choice ==1:
+        if choice == 1:
+            for s in students:
+                rank_count = 1 #초기화
+                for ss in students:
+                    if s.total<ss.total:
+                        rank_count += 1
+                    s.rank = rank_count
+            print("등수처리가 완료되었습니다.")
+            print()
+        else:
+            print("등수처리 진행을 취소하셨습니다.")
+                         
 #-----------------------------
 # 메인 프로그램 시작
 #-----------------------------
@@ -128,47 +226,52 @@ while True:
                 break
             # 학생검색 프로그램 부분
             stu_search(choice)
-    elif choice == 4:   # 학생성적수정
-     
-     while True:
-          search = input('찾고자 하는 학생의 이름을 입력해주세요 (0.취소) >> ')
-          cnt = 0
-          if search == '0':
-               print('학생찾기를 종료합니다.')
-               break
-          for stu in students:
-               if stu.name ==search:
-                    break
-               cnt += 1 # cnt = 리스트
-          
-          if cnt == len(students):
-               print(f'{search} 학생이 존재하지 않습니다. 다시 입력하세요.')
-               break
-     
-          else:
-               print('찾고자 하는 학생의 위치 :',cnt)
-               print(f'{search} 학생을 찾았습니다. ')
-               print(students[cnt])
-               
-          while True:
-               s_title = ['','국어','영어','수학']
-               s_input = int(input('수정하려는 과목을 선택하세요 0. 취소 1. 국어 2. 영어 3. 수학 >> '))
-               print('[ 수정할 과목 선택]')
-               
-               print('-'*60)
-               
-            #    if s_input == 1:
-            #         print('국어 점수 수정')
-            #         print(f'현재 국어 점수 : {i.kor}')
-            #         score = int(input('수정할 점수를 입력하세요. >> '))
-            #         i.kor = score
-            #         i.total = i.kor + i.eng + i.math
-            #         i.avg = float('{:.2f}'.format(i.total/3))
-            #         print(' 수정완료되었습니다. ')
+    elif choice == 4: # 학생성적수정
+       stu_update()
+       
+    elif choice == 5: # 학생성적삭제
+        stu_delete()
+        
+            
+                
+    elif choice == 6: # 등수처리
+        
+          stu_rank()      
                     
-            #    if s_input ==2:
-            #         print('영어 점수 수정')
-            #         print(f'현재 영어 점수 :{i.eng}')
-            #         score = int(input('수정할 점수를 입력하세요. >>'))
-            #         i.eng =    score
+       
+            
+    else: 
+        print('학생성적프로그램을 종료합니다.')
+        break
+        
+
+       
+    # while True:
+    #       search = input('찾고자 하는 학생의 이름을 입력해주세요 (0.취소) >> ')
+    #       cnt = 0
+    #       if search == '0':
+    #            print('학생찾기를 종료합니다.')
+    #            break
+    #       for stu in students:
+    #            if stu.name ==search:
+    #                 break
+    #            cnt += 1 # cnt = 리스트
+          
+    #       if cnt == len(students):
+    #            print(f'{search} 학생이 존재하지 않습니다. 다시 입력하세요.')
+    #            break
+     
+    #       else:
+    #            print('찾고자 하는 학생의 위치 :',cnt)
+    #            print(f'{search} 학생을 찾았습니다. ')
+    #            print(students[cnt])
+               
+    #       while True:
+    #            s_title = ['','국어','영어','수학']
+    #            s_input = int(input('수정하려는 과목을 선택하세요 0. 취소 1. 국어 2. 영어 3. 수학 >> '))
+    #            print('[ 수정할 과목 선택]')
+               
+    #            print('-'*60)
+               
+        
                     
