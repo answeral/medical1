@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title></title>
+          <style>
+               @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+               
+               *{margin: 0;padding: 0;
+                    font-family: "Noto Sans KR", sans-serif;
+                    font-optical-sizing: auto;
+                    font-weight: 400;
+                    font-style: normal;}
+                    
+               table,th,td{border: 1px solid black;}
+               th{height: 50px; font-weight: 700; }
+               td{height: 50px;}
+               #t1{background-color: #d3d3d3;}
+          </style>
+     </head>
+     <body>
+          <table>
+               <colgroup>
+                    <col width = "200px">
+                    <col width = "200px">
+                    <col width = "200px">
+                    <col width = "200px">
+               </colgroup>
+          <thead>
+               <tr id="t1">
+                    <th>방 이름</th>>
+                    <th>대상</th>>
+                    <th>크기</th>>
+                    <th>가격</th>>
+               </tr>
+          </thead>
+          <tbody>
+               <tr>
+                    <th>유채방</th>
+                    <td>&nbsp;여성 도미토리</td>
+                    <td rowspan="3">&nbsp;4인실</td>
+                    <td rowspan="4">&nbsp;1인 20,000원</td>
+               </tr>
+               <tr>
+                    <th rowspan="2">동백방</th>
+                    <td>&nbsp;동성 도미토리</td>
+               </tr>
+               <tr>
+                    <td>&nbsp;가족 1팀</td>
+               </tr>
+               <tr>
+                    <th>천혜향방</th>
+                    <td>&nbsp;-</td>
+                    <td>&nbsp;2인실</td>
+                    
+               </tr>
+          </tbody>
+          <tfoot>
+               <tr id="t1">
+                    <th colspan="4">바깥채 전체를 렌트합니다</th>
+                    
+               </tr>
+          </tfoot>  
+          </table>
+     </body>
+</html>
