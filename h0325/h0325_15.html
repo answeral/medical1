@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
      <head>
-          <title></title>
+          <title>table태그</title>
           <style>
                @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
                
@@ -12,9 +12,12 @@
                     font-style: normal;}
                     
                table,th,td{border: 1px solid black;}
-               th{height: 50px; font-weight: 700; }
-               td{height: 50px;}
-               #t1{background-color: #d3d3d3;}
+               th{height: 50px; }
+               td{height: 50px; }
+               thead{background-color: #d3d3d3; border-bottom: 2px solid black;
+                    text-align: center; font-weight: 700;}
+               tfoot{background-color: #d3d3d3; border-bottom: 2px solid black;
+                    text-align: center; font-weight: 700;}
           </style>
      </head>
      <body>
@@ -26,7 +29,7 @@
                     <col width = "200px">
                </colgroup>
           <thead>
-               <tr id="t1">
+               <tr>
                     <th>방 이름</th>>
                     <th>대상</th>>
                     <th>크기</th>>
@@ -34,6 +37,7 @@
                </tr>
           </thead>
           <tbody>
+               <h2>요안도라 객실</h2>
                <tr>
                     <th>유채방</th>
                     <td>&nbsp;여성 도미토리</td>
@@ -55,7 +59,7 @@
                </tr>
           </tbody>
           <tfoot>
-               <tr id="t1">
+               <tr >
                     <th colspan="4">바깥채 전체를 렌트합니다</th>
                     
                </tr>
