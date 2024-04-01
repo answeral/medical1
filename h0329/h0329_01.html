@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>background</title>
+     <style>
+          *{margin: 0; padding: 0;}
+          div{width: 500px;height: 600px;
+               border: 20px dotted black;
+               margin: 50px auto;
+               
+               /*padding 크기에 영향을 미침 (box-sizing: border-box; : 크기에 영향을 미치지 않게)*/
+               padding-top: 50px; 
+               padding-left: 100px;
+               box-sizing: border-box;
+               
+               /*background-clip: padding-box; 안을 기준으로 선을 맞춤 - 이미지 삽입시 가리지 않게 */
+               background-color: yellow;
+               background-clip: content-box;
+               
+               /*margin*/
+               /*margin: 바깥쪽 padiing: 안쪽* 크기에 영향을 미치지 않음/
+               /*margin: 50px 80px 70px 100px;/*한번에 적을 수 있음 : 위>오른쪽>아래>왼쪽 */
+               }
+
+     </style>
+</head>
+<body>
+     <div>
+          연이은 뭇매를 맞던 티빙이 놀라운 반전을 하고 있다. 
+          1인당 평균 시청 시간이 사상 처음으로 넷플릭스를 추월했다. 
+          특히 한국프로야구(KBO) 독점 중계 이후 주말 이용자가 20%이상 급증한 것으로 나타났다.
+          넷플릭스 기세에 눌려 있던 티빙이 토종 온라인동영상서비스(OTT) 자존심을 세우고 있다. 
+          OTT 업계에서도 티빙의 기세를 심상치 않게 보고 있다.
+     </div>
+</body>
+</html>
