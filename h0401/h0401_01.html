@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          *{margin:0; padding: 0;}
+          .main{width: 1200px; height: 400px; border: 1px solid black;
+          display: flex; justify-content:space-between; margin: 0 auto;
+          align-items: stretch;}
+          /* justify-content: center; : 가운데로 붙어서 모으기*/
+          /* justify-content:space-between; : 끝쪽으로 붙어서 간격맞춰 떨어져있음. */
+          /* margin: 0 auto; 가운데 정렬 (화면 기준으로)*/
+          /* justify-content:space-around; : 끝이 덜어져있고 간격 맞춰서 떨어져있음*/
+          /* align-items: center; : 큰 div안에서 위아래로 간격을 가지고 떨어져있음 */
+          /* align-items: baseline; : 큰 글자의 아랫부분을 기준점으로 높낮이를 맞춤(글자크기가 다르면 div의 위치가 달라짐)*/
+          /* align-items: stretch; : div 크기를 늘려서 맞춤 */
+          .box{width: 300px; height: 200px; border: 2px solid blue;
+          background:yellow;  font-size: 25px;}
+          #c2{font-size: 50px; }
+     </style>
+</head>
+<body>
+     <div class="main">    
+          <div class="box">구글사이트</div>
+          <div class="box" id="c2">다음사이트</div>
+          <div class="box">네이버사이트</div>
+     </div>     
+
+
+</body>
+</html>
