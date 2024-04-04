@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>변수</title>
+     <script>
+          var a = 10; //js변수 선언시 var 붙이기
+          var b = 2.5; // let const
+          var c = "안녕";
+          var a = "선언";
+          var d = "100";
+          var e = true; //True X true O 모든 언어는 소문자 , 파이썬만 대문자
+          console.log("a의 타입 : "+typeof(a))
+          console.log("b의 타입 : "+typeof(b))
+          console.log("c의 타입 : "+typeof(c))
+          console.log("d의 타입 : "+typeof(d))
+          console.log("e의 타입 : "+typeof(e))
+          console.log("a+b의 타입 : "+(a+b)) //파이선은 에러, js 결과값 : 10안녕(스트링타입으로 바뀜)
+          console.log("a+c의 타입 : "+(a+c))
+          console.log("a+d의 타입 : "+(a+d))
+          console.log("a+d의 타입 : "+(a+Number(d))) //타입변환 Number()
+          var f ;
+          console.log("f타입 : "+typeof(f));// undefined
+          f = 10;
+          console.log("f타입2 : "+typeof(f));// number
+          f = "반가워";
+          console.log("f타입3 : "+typeof(f));// string ,js와 파이썬은 중간에 형변환 가능
+          g = 1000;
+          console.log("g타입3 : "+typeof(g));
+
+     </script>
+</head>
+<body>
+     
+</body>
+</html>

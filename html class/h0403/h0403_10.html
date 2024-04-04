@@ -35,13 +35,14 @@
           table td{padding: 20px 24px ; font-size: 14px; line-height: 22px; text-align: left;
           color: #101010;}
           
-          .num{width: 40px; height: 40px;  font-size: 3px; padding: 50px 20px ;
-          display: flex;}
-          #n1:hover{background: #202020; color: #fff; }
-          #n2:hover{background: #202020; color: #fff;}
-          #n3:hover{background: #202020; color: #fff; }
-          #n4:hover{background: #202020; color: #fff; }
-          #n5:hover{background: #202020; color: #fff;}
+          .page_bottom{padding-top:56px; text-align: center;}
+        .page_bottom ul{display: flex; width:400px; margin:0 auto;}
+        .page_bottom li{width:40px; height:40px; border:1px solid #E6E6E6;
+          font-size: 14px; font-weight: 700; text-align: center;
+          line-height: 40px; margin-right:5px; }
+        .page_bottom .p_on{background:#202020; color:#fff; font-weight: 700;}
+        .page_bottom li:hover{background:#202020; color:#fff; font-weight: 700;}
+        .page_bottom li:nth-child(3),.page_bottom li:nth-child(9){width:10px; border:0;}
      </style>
 </head>
 <body>
@@ -190,13 +191,20 @@
                     </tr>
                     
                </table>
-               <div class="num">
-                    <strong><span id="n1">1</span></strong>
-                    <strong><span id="n2">2</span></strong>
-                    <strong><span id="n3">3</span></strong>
-                    <strong><span id="n4">4</span></strong>
-                    <strong><span id="n5">5</span></strong>
-
+               <div class="page_bottom">
+                    <ul>
+                        <li><i class="fa-solid fa-angles-left"></i></li>
+                        <li><i class="fa-solid fa-chevron-left"></i></li>
+                        <li></li>
+                        <li class="p_on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li></li>
+                        <li><i class="fa-solid fa-angle-right"></i></li>
+                        <li><i class="fa-solid fa-angles-right"></i></li>
+                    </ul>
                </div>
           </div>
 

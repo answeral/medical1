@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>사칙연산</title>
+     <script>
+          var num1 = 15;
+          var num2 = 2;
+          var result;
+          result = num1  + num2;
+          //document.write - 화면 출력, 화면창 = document라고 함 
+          document.write(" num1+num2 결과값 : "+result+"<br>");
+          //태그를 사용할 수 있음
+          document.write("<h1>안녕하세요.</h1>");
+          // 결과값 확인 : alert(), console,log(), document.write()
+          result2 = num1 - num2;
+          document.write("num1-num2 결과값 : "+result2+"<br>");
+          result3 = num1 * num2;
+          document.write("num1*num2 결과값 : "+result3+"<br>");
+          result4 = num1 / num2;
+          result5 = num1 % num2;
+          document.write("num1%num2 결과값 : "+result5+"<br>");
+          result4 = parseInt(result4); //정수형 숫자 
+          // parseFloat 실수형 변환 , parseInt 정수형 변환
+          document.write("result4 타입 : " + typeof(result4)+"<br>");
+          document.write("num1/num2 결과값 : "+result4+"<br>"); //7.5->7
+     </script>
+</head>
+<body>
+     
+</body>
+</html>
