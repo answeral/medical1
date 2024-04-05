@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>continue</title>
+     <script>
+          // 1-100
+          //랜덤숫자 맞추기
+          // 5번까지 랜덤숫자 1개, 입력가능 횟수 5번,  
+          var in_num;
+          var ran_num = Math.floor(Math.random()*100)+1;
+          for(var i=1; i<=5; i++){
+               var in_num = Number(prompt("숫자를 입력해주세요"));
+               if (ran_num == in_num){
+                    alert("정답입니다" +"<br>" +"정답 : " +ran_num);
+               }
+               else if(i<=4){alert("오답입니다.");}
+               else{alert("정답은" +ran_num+"입니다.");}
+                    
+          }
+          /* 다른 예
+          var in_num;
+          var temp=0;
+          var ran_num = Math.floor(Math.random()*100)+1;
+          for(var i=1; i<=5; i++){
+               var in_num = Number(prompt("숫자를 입력해주세요"));
+               if (ran_num == in_num){
+                   temp = 1;
+                   break;
+               }
+              if(temp==0){
+               document.write("5번 도전에 실패하셨습니다.<br>")
+               document.write("정답은"+ ran_num)
+              }
+              else{
+               document.write("정답은"+ ran_num)
+              }
+                    
+          }*/
+     </script>
+</head>
+<body>
+     
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+          //배열 10,20,30,40,50 / 배열추가 100,200 후 출력
+          var arr1 = [10,20,30,40,50]
+          /*
+          arr1.push(100)
+          arr1.push(200)
+          
+          for(var i=0 ;i<arr1.length; i++){
+               document.write(arr1[i],"<br>")
+          }
+          */
+          var arr2 = [100,200]
+          var result2 = arr1.concat(arr2);
+          document.write(result2,"<br>")
+          
+          document.write("----------------------------------","<br>")
+
+          arr = [10,20,5,40,9];
+          document.write(arr.sort(function(a,b){
+               return a-b;
+          }),"<br>");
+
+          
+          
+
+     </script>
+</head>
+<body>
+     
+</body>
+</html>

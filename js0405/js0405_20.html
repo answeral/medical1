@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script>
+    /*
+    var num_str = "12345";
+    document.write(num_str.substring(0,3),"<br>");
+    document.write(num_str.charAt(4),"<br>");
+    */
+
+
+    //010-1234-5678
+    // 출력 : 010-1234-****
+    while(true){
+      var p_num = prompt("핸드폰 번호를 입력해주세요 예)010-1234-5678");
+      if (p_num.length!=13){
+        alert("-를 포함한 전화번호를 입력하셔야합니다");
+        continue;
+      }else{
+        break;
+      }
+    document.write(p_num.substring(0,9),"****","<br>");}
+      
+
+    /*
+    var in_no = prompt("핸드폰 번호를 입력해주세요 예)010-1234-5678");
+    var tel = in_no.substring(0,9);
+    var tel2 = tel+"****";
+    document.write(tel2,"<br>")
+    
+    
+    
+    */
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>문자열</title>
+  <script>
+    //11111-99999 랜덤숫자 몇개 맞았는지에 대해서 출력
+    //102457
+    /*var num =5;
+    console.log(String(num).padStart(2,"0"));*/
+    var lo = Math.floor(Math.random()*100000)+1;
+    var lotto =String(lo).padStart(5,"0");
+
+    var in_on = prompt("5자리 숫자를 입력하세요.",lotto);
+    
+    var count = 0;
+    for(var i=0; i<lotto.length; i++){
+      if(lotto[i]==in_on[i]){
+        count++;
+        continue;
+      }
+    }
+   document.write("로또 번호 : ",lotto,"<br>")
+   document.write("입력 번호 : ",in_on,"<br>")
+   document.write("맞춘 번호 : ",count,"<br>")
+
+
+   //11조99999
+   //lotto = 2개짜리 랜덤 +"조"+5개짜리랜덤
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
