@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title></title>
+    <style>
+        section{width: 1200px; margin: 50px auto;}
+        h2{text-align: center;}
+        table{border-collapse: collapse; width: 1200px;}
+        table,th,td{border: 1px solid black; text-align: center;}
+        th{height: 45px; background: #efefef;}
+        td{height: 40px;}
+    </style>
+    <script>
+        $(function(){
+            let No = [1,2,3,4,5,6,7,8,9,10];
+            let name = ['홍길동','유관순','이순신','김구','강감찬','김유신','홍길순','홍길자','순자','영숙'];
+            let kor = [76,80,57,62,50,67,98,71,93,72];
+            let eng = [89,66,58,60,79,98,72,89,82,63];
+            let math = [56,52,61,96,74,73,72,89,51,52]; 
+            let total = [221,198,176,218,203,238,242,224,226,187];
+            let avg = [73.6,66,58.6,72.6,67.6,79.3,80.6,74.6,75.3,62.3];
+       
+            
+            let hdata="";
+            for(let i=0; i<10; i++){
+                hdata += " <tr>";
+                hdata +="<td>"+(i+1)+"</td>";
+                hdata +="<td>"+name[i]+"</td>";
+                hdata +="<td>"+kor[i]+"</td>";
+                hdata +="<td>"+eng[i]+"</td>";
+                hdata +="<td>"+math[i]+"</td>";
+                hdata +="<td>"+total[i]+"</td>";
+                hdata +=" <td>"+avg[i]+"</td>";
+                hdata +=" <td><button class='delBtn'>삭제</button></td>";
+                hdata +=" </tr>";
+                $("tbody").html(hdata);
+                }
+                
+                $(".delBtn").click(function(){
+                    console.log("클릭한 요소 id : "+$(this).parent().parent().attr("id"));
+                   if(confirm(del_id+"번 학생의 성적을 정말 삭제하시겠습니까?")){
+                       let del_id = $(this).parent().parent().attr("id");
+                      $("#"+del_id).remove
+
+                   }
+                    //console.log("class 부모 요소 모음 : "+$(".delBtn")[0].innerText);
+                /*
+                $(".delBtn").click(function(){
+                    let del_id = $(".delBtn").parent().parent();
+                        console.log("부모 요소 모음 : "+del_id.attr("id"));
+                        if(confirm("삭제하시겠습니까?"))
+                            $(del_id).remove();*/
+            });
+        });//jquery
+ 
+    </script>
+
+</head>
+<body>
+    <section>
+        <h2>고객행복센터</h2>
+        <table>
+            <colgroup>
+            <col width="15%">
+            <col width="25%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            <col width="10%">
+            </colgroup>
+            <thead>    
+                <tr>
+                    <th>학번</th>
+                    <th>이름</th>
+                    <th>국어</th>
+                    <th>영어</th>
+                    <th>수학</th>
+                    <th>합계</th>
+                    <th>평균</th>
+                    <th class="delBtn">삭제</th>
+                </tr>
+            </thead>
+            <tbody>   
+                
+            </tbody>     
+        </table>
+        <button id="addBtn">게시물 추가</button>
+    </section>
+</body>
+</html>
