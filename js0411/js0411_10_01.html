@@ -36,17 +36,17 @@
                 hdata +="</tr>";
             }
             $("tbody").html(hdata);
-            $(".delBtn").click(function(){
+            /*$(".delBtn").click(function(){
                 console.log("class 요소모음 : "+$(".delBtn")[0].innerText);
-            });
-            /*
+            });*/
+           
             $(".delBtn").click(function(){
                 let del_id = $(".delBtn").parent().parent();
                 console.log("부모요소모음 : "+del_id.attr("id"));
                 if(confirm("삭제하시겠습니까?"))
                 $(del_id.attr("id")).remove();
             });
-            */
+            
         });//jquery
     </script>
 </head>
