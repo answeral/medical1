@@ -18,8 +18,13 @@ trs = t_table.find_all("tr")
 tds = t_table.find_all("td")
 # print(tds)
 
-#print(trs[14]) #2-14
+# print(trs[2].text) #2-14
 
-for trs in range(2,15):
-     print(trs.text)
+# for trs in range(2,15):
+#      print(trs)
      
+for i in trs[2:15]:
+     print(i.text)
+     
+# print(tds)
+
