@@ -7,7 +7,7 @@ $(function(){
     let s_count =1; 
     //최초데이터 불러오기
     $.ajax({
-        url:"http://127.0.0.1:5500/medical1-1/students/json/stu_score.json",
+        url:"http://192.168.0.21:5501/medical1-1/z03_javascript_class/z03_javascript_class/students/json/stu_score.json",
         data:"",
         type:"get",
         dataType:"json",
